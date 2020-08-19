@@ -1,0 +1,214 @@
+.container{
+    position: relative;
+}
+
+/* Navbar */
+.custom-navbar{
+    /* background-color: rgba(0,0,0,.1); */
+    top:0;
+    left: 15px;
+    right: 15px;
+    position: absolute;
+    overflow: hidden!important;
+    z-index: 1000;
+}
+
+.custom-navbar .navbar-brand{
+    font-size: 4rem;
+    font-family: francois one;
+}
+
+.custom-navbar .navbar-brand span{
+    font-size: 1.5rem;
+    font-family: Sedgwick Ave Display;
+    color:rgb(255, 193, 7);
+    font-weight: bolder;
+    display: inline-block;
+    animation: turnslash .5s;
+    animation-fill-mode: forwards;
+}
+
+.custom-navbar .navbar-nav{
+    background-color: rgba(245, 245, 245);
+}
+
+.custom-navbar .nav-item{
+    padding: 12px;
+}
+
+.custom-navbar .nav-link{
+    color: white!important;
+    font-weight: bolder;
+}
+
+.custom-navbar .nav-item.active .nav-link{
+    color: rgb(255, 193, 7)!important;
+    font-weight: bolder;
+}
+
+
+
+/* Carousel Hero */
+.hero{
+    height: 75vh;
+    width: 100%;
+    overflow: hidden!important;
+    position: relative;
+}
+
+
+.hero .hero-caption{
+    position: absolute;
+    top:0%;
+    left: 0;
+    right: 0;
+    padding: 0px 20%;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 999;
+    background-color: #607d8bdb;
+    color: white;
+}
+
+.hero-caption h1{
+    /* font-size: 4rem; */
+    margin: 2rem;
+    font-family: roboto;
+    font-weight: bolder;
+}
+
+.hero img{
+    min-height: 100vh;
+    width: initial;
+    min-width: 100%;
+}
+
+/* Product */
+.section-head{
+    font-family: Berkshire Swash;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 80px 0px;
+    /* color:yellowgreen */
+}
+
+.product{
+    height: 400px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(85, 76, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-body{
+    position: absolute;
+    background-color: rgba(85, 76, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: scale(0);
+    transition: all .5s;
+    transition-delay: .3s;
+}
+
+.product:hover .product-body{
+    transform: scale(1);
+}
+
+.product img{
+    transform: scale(.9);
+    transition: all .3s;
+}
+
+.product:hover img{
+    transform: scale(1.5) rotate(360deg);
+}
+
+.product-body h1{
+    color:white;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 2rem .2rem;
+}
+
+.product-body h2{
+    color:rgb(19, 18, 18);
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: rgb(249, 255, 255);
+    border-radius: 10px;
+    padding: 16px;
+}
+
+.product-body a.btn{
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    padding: 14px 16px;
+    max-width: 10.5rem;
+    border-radius: 0px;
+}
+
+/* Workers */
+.workers-section{
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+
+.workers-section > div{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 0px;
+    min-height: 100%;
+}
+
+.workers-section{
+    width: 100%;
+}
+
+.workers-section .section-head{
+    color: white;
+}
+
+.workers img{
+    clip-path: circle();
+}
+
+.workers h2{
+    text-align: center;
+    font-size: 1.3rem;
+    color: rgb(255, 193, 7);
+    font-weight: bolder;
+    font-family: francois one;
+}
+
+.footer{
+    min-height: 40vh;
+    background-color: darkslategray;
+    color:white;
+    padding: 40px 20px;
+}
+
+@keyframes turnslash{
+    from{
+        transform: rotate(0) translate(0) scale(5);
+    }
+    to{
+        transform: rotate(90deg) translate(-18px,18px) scale(1);
+    }
+}
+
+@media screen and (min-width:768px){
+    .custom-navbar .navbar-nav{
+        background-color: transparent;
+    }
+}
